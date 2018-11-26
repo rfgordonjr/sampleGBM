@@ -403,7 +403,7 @@ for(i in 1:length(fit2$var.names)){
 options(scipen=999)
 intMat23[,,1]
 nameKeys2 <- data.frame(abbrevs = LETTERS[1:length(fit2$var.names)], varNames = fit2$var.names, stringsAsFactors = FALSE)
-## There doesnt seem to be any non-redundant 3-way interactions ####
+
 interactions_3way <- as.data.frame.table(intMat23, responseName = "H_stat", stringsAsFactors = FALSE, dnn = c(fit2$var.names, fit2$var.names, fit2$var.names)) %>% 
   left_join(nameKeys2, by = c("Var1" = "abbrevs")) %>% 
   rename(varNames1 = varNames) %>% 
